@@ -101,6 +101,7 @@ in
     
     # Video / content creation
     ffmpeg                   # Video rendering/transcoding toolkit
+    davinci-resolve          # DaVinci Resolve (free) - requires GPU/CUDA/OpenCL
     kdenlive                 # Video editor
     handbrake                # Video transcoder GUI
     yt-dlp                   # Media downloader
@@ -118,6 +119,7 @@ in
     
     superTuxKart             # Racing game
     retroarch                # Retro gaming emulator frontend
+    openage                  # Age of Empires II (open-source engine clone)
   ];
 
   # ═══════════════════════════════════════════════════════════
