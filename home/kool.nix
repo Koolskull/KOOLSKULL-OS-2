@@ -30,6 +30,7 @@ in
     
     milkytracker             # Classic MOD tracker
     furnace                  # Multi-system chiptune tracker
+    schismtracker            # Impulse Tracker-style music tracker (IT/XM/S3M/MOD)
     
     # OpenMPT via Wine (Windows-only tracker)
     wineWowPackages.stable   # Wine for running OpenMPT
@@ -97,6 +98,13 @@ in
     
     mpv
     imv
+    
+    # Video / content creation
+    ffmpeg                   # Video rendering/transcoding toolkit
+    kdenlive                 # Video editor
+    handbrake                # Video transcoder GUI
+    yt-dlp                   # Media downloader
+    imagemagick              # Image batch processing/conversion
     
     # Screenshot/recording
     grim
