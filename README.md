@@ -49,7 +49,9 @@ KOOLSKULL OS 2/
 │       └── graphics.nix
 ├── packages/
 │   ├── cursor.nix         # Cursor IDE AppImage package
-│   └── redot.nix          # Redot Engine package
+│   ├── redot.nix          # Redot Engine package
+│   ├── frame.nix          # Frame Wallet (Ethereum)
+│   └── sparrow.nix        # Sparrow Wallet (Bitcoin)
 └── home/
     └── kool.nix           # Home Manager user configuration
 ```
