@@ -17,6 +17,7 @@ Built with **Hyprland** + **Nix Flakes** + **Home Manager**.
 | **Video / Media** | ffmpeg, Kdenlive, HandBrake, OBS Studio, mpv |
 | **Development** | Cursor IDE, VS Code, Zed, Kate, Redot Engine, Node.js, npm, Bun |
 | **Games / Emulation** | SuperTuxKart, RetroArch |
+| **Workflow / Utilities** | FileZilla (FTP/SFTP), Ark (archive manager), p7zip/unzip/zip/xz/zstd/tar |
 | **Browser** | Brave (default) |
 | **Desktop** | Hyprland (Wayland compositor) |
 

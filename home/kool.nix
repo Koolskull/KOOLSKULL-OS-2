@@ -88,6 +88,15 @@ in
     btop
     pavucontrol
     filezilla   # FTP/SFTP client (useful for moving media to/from servers)
+
+    # Archives / unzipper tools
+    ark         # KDE archive manager (GUI)
+    p7zip       # 7z support
+    unzip       # .zip support
+    zip
+    xz
+    zstd
+    gnutar
     
     # File manager
     pcmanfm
