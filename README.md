@@ -18,6 +18,7 @@ Built with **Hyprland** + **Nix Flakes** + **Home Manager**.
 | **Development** | Cursor IDE, VS Code, Zed, Kate, Redot Engine, Node.js, npm, Bun |
 | **Games / Emulation** | SuperTuxKart, RetroArch |
 | **Workflow / Utilities** | FileZilla (FTP/SFTP), Ark (archive manager), p7zip/unzip/zip/xz/zstd/tar |
+| **Crypto / Web3** | Frame Wallet (open-source Ethereum wallet; not MetaMask) |
 | **Browser** | Brave (default) |
 | **Desktop** | Hyprland (Wayland compositor) |
 
@@ -271,6 +272,15 @@ The Redot package also requires updating the SHA256 hash on first build (same wo
 1. Try to build: `sudo nixos-rebuild switch --flake .#koolskull-vm`
 2. Nix will fail and show the correct hash
 3. Update `packages/redot.nix` with the correct hash
+4. Rebuild
+
+### Frame Wallet Hash
+
+Frame Wallet is packaged from an AppImage release and also needs its SHA256 hash updated on the first build:
+
+1. Try to build: `sudo nixos-rebuild switch --flake .#koolskull-vm`
+2. Nix will fail and show the correct hash
+3. Update `packages/frame.nix` with the correct hash
 4. Rebuild
 
 ## 📝 TODO

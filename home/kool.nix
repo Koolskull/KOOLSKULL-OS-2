@@ -7,6 +7,9 @@ let
   
   # Import Redot Engine package (Godot fork)
   redot = import ../packages/redot.nix { inherit pkgs; };
+
+  # Import Frame Wallet (open-source Ethereum wallet)
+  frameWallet = import ../packages/frame.nix { inherit pkgs; };
 in
 {
   home.username = "kool";
@@ -64,6 +67,12 @@ in
     # ═══════════════════════════════════════════════════════════
     
     brave                    # Brave Browser (default)
+
+    # ═══════════════════════════════════════════════════════════
+    # 🔐 CRYPTO / WEB3
+    # ═══════════════════════════════════════════════════════════
+
+    frameWallet              # Frame Wallet (open-source Ethereum wallet)
     
     # ═══════════════════════════════════════════════════════════
     # 🖥️ TERMINAL & SHELL
