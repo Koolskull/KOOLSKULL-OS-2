@@ -6,9 +6,11 @@ A custom NixOS configuration with Hyprland, built with Nix Flakes.
 
 | Category | Applications |
 |----------|-------------|
-| **3D & Graphics** | Blender 5 (latest), Krita |
-| **Music Trackers** | Milky Tracker, Furnace, OpenMPT (via Wine) |
-| **Development** | Cursor IDE, Kate |
+| **3D & Graphics** | Blender (latest via unstable), Krita, GIMP, FreeCAD |
+| **Music / Audio** | MilkyTracker, Furnace, Schism Tracker, OpenMPT (via Wine), LMMS, Ardour, Audacity |
+| **Video / Media** | ffmpeg, Kdenlive, HandBrake, OBS Studio, mpv |
+| **Development** | Cursor IDE, VS Code, Zed, Kate, Redot Engine, Node.js, npm, Bun |
+| **Games / Emulation** | SuperTuxKart, RetroArch |
 | **Browser** | Brave (default) |
 | **Desktop** | Hyprland (Wayland compositor) |
 
@@ -32,7 +34,8 @@ KOOLSKULL OS 2/
 │       ├── audio.nix
 │       └── graphics.nix
 ├── packages/
-│   └── cursor.nix         # Cursor IDE AppImage package
+│   ├── cursor.nix         # Cursor IDE AppImage package
+│   └── redot.nix          # Redot Engine package
 └── home/
     └── kool.nix           # Home Manager user configuration
 ```
@@ -168,6 +171,15 @@ Or get the hash manually:
 ```bash
 nix-prefetch-url --type sha256 "https://downloader.cursor.sh/linux/appImage/x64"
 ```
+
+### Redot Hash
+
+The Redot package also requires updating the SHA256 hash on first build (same workflow as Cursor):
+
+1. Try to build: `sudo nixos-rebuild switch --flake .#koolskull-vm`
+2. Nix will fail and show the correct hash
+3. Update `packages/redot.nix` with the correct hash
+4. Rebuild
 
 ## 📝 TODO
 
