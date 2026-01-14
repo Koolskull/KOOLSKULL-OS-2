@@ -42,6 +42,85 @@ KOOLSKULL OS 2/
 
 ## 🚀 Getting Started
 
+## 💾 Install on Real Hardware (Windows + Rufus + USB)
+
+This is the simplest “from Windows to NixOS on a real machine” flow.
+
+### 1) Download the NixOS ISO
+
+- Download a NixOS ISO from the official downloads page: `https://nixos.org/download`
+- Recommended: **Minimal ISO** (fastest to install; you’ll use this repo/flake for your actual setup)
+
+### 2) Flash the ISO to a USB drive with Rufus (Windows)
+
+1. Download Rufus: `https://rufus.ie/`
+2. Plug in your USB drive (**this will erase it**)
+3. Open Rufus:
+   - **Device**: select your USB drive
+   - **Boot selection**: choose your downloaded NixOS `.iso`
+   - **Partition scheme**:
+     - **GPT** = modern UEFI PCs (recommended)
+     - **MBR** = legacy BIOS/older machines
+   - **Target system** will follow your choice (UEFI vs BIOS)
+4. Click **START**
+5. If Rufus asks **ISO mode vs DD mode**:
+   - If you’re not sure: choose **DD mode** (most compatible for Linux installer ISOs)
+
+### 3) Boot from the USB
+
+1. Reboot the target PC
+2. Enter the boot menu (common keys: **F12**, **F10**, **Esc**, **Del** — varies by PC)
+3. Select the USB drive
+4. If you have boot issues:
+   - Disable **Secure Boot** in BIOS/UEFI settings (often required)
+   - Prefer **UEFI** boot (GPT) on modern systems
+
+### 4) Install NixOS + apply this repo (flake) on the new machine
+
+Once you’re booted into the NixOS installer environment:
+
+1. Connect to the internet
+   - Wired usually “just works”
+   - For Wi‑Fi you can use `nmtui` (terminal UI)
+2. Partition + format your disk (example only; **adjust to your needs**)
+   - You need at minimum:
+     - An EFI System Partition mounted at `/mnt/boot` (UEFI/GPT installs)
+     - A root filesystem mounted at `/mnt`
+3. Mount your filesystems under `/mnt`
+4. Generate the hardware config:
+
+```bash
+sudo nixos-generate-config --root /mnt
+```
+
+5. Clone this repo (into the installer environment):
+
+```bash
+nix-shell -p git
+git clone https://github.com/Koolskull/KOOLSKULL-OS-2.git
+cd KOOLSKULL-OS-2
+```
+
+6. Copy the generated hardware config into the repo:
+
+```bash
+cp /mnt/etc/nixos/hardware-configuration.nix hosts/koolskull/hardware-configuration.nix
+```
+
+7. Install NixOS using the flake (this repo):
+
+```bash
+sudo nixos-install --root /mnt --flake .#koolskull
+```
+
+8. Reboot:
+
+```bash
+reboot
+```
+
+After reboot, your machine should come up on the KOOLSKULL OS config.
+
 ### Option 1: Test in VM (Recommended First Step)
 
 1. **Download NixOS ISO** from https://nixos.org/download
