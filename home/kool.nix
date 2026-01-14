@@ -73,6 +73,7 @@ in
     # ═══════════════════════════════════════════════════════════
 
     frameWallet              # Frame Wallet (open-source Ethereum wallet)
+    monero-gui               # Monero GUI Wallet (XMR)
     
     # ═══════════════════════════════════════════════════════════
     # 🖥️ TERMINAL & SHELL
