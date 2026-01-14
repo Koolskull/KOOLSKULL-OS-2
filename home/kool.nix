@@ -4,6 +4,9 @@
 let
   # Import Cursor IDE package
   cursor = import ../packages/cursor.nix { inherit pkgs; };
+  
+  # Import Redot Engine package (Godot fork)
+  redot = import ../packages/redot.nix { inherit pkgs; };
 in
 {
   home.username = "kool";
@@ -37,8 +40,18 @@ in
     # 💻 DEVELOPMENT
     # ═══════════════════════════════════════════════════════════
     
+    # IDEs & Editors
     cursor                   # Cursor IDE (AI code editor)
+    vscode                   # Visual Studio Code
     kate                     # KDE Advanced Text Editor
+    
+    # Game Development
+    redot                    # Redot Engine (Godot fork)
+    
+    # JavaScript / Node.js
+    nodejs_22                # Node.js LTS
+    nodePackages.npm         # npm package manager
+    bun                      # Bun runtime (fast JS/TS)
     
     # ═══════════════════════════════════════════════════════════
     # 🌐 BROWSER
@@ -85,6 +98,12 @@ in
     slurp
     wl-clipboard
     obs-studio   # Screen recording
+    
+    # ═══════════════════════════════════════════════════════════
+    # 🎮 GAMES
+    # ═══════════════════════════════════════════════════════════
+    
+    superTuxKart             # Racing game
   ];
 
   # ═══════════════════════════════════════════════════════════
