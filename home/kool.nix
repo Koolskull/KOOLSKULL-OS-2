@@ -87,6 +87,7 @@ in
     
     btop
     pavucontrol
+    filezilla   # FTP/SFTP client (useful for moving media to/from servers)
     
     # File manager
     pcmanfm

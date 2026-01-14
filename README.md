@@ -1,6 +1,12 @@
 # KOOLSKULL OS 2
 
-A custom NixOS configuration with Hyprland, built with Nix Flakes.
+KOOLSKULL OS 2 is a **beginner-friendly NixOS “prebuild”** for a creative workstation: filmmaking, editing, 3D, audio, and general content production.
+
+If you’re new to NixOS, don’t worry: you can **boot a USB installer**, install NixOS, then apply this configuration with one command. After that, updates are just `git pull` + `nixos-rebuild`.
+
+It also includes practical workflow tools you’ll want in real production environments (like **`ffmpeg`** for rendering/transcoding, and an **FTP/SFTP client** for moving assets to/from servers/NAS boxes).
+
+Built with **Hyprland** + **Nix Flakes** + **Home Manager**.
 
 ## 🎨 Included Applications
 
@@ -13,6 +19,12 @@ A custom NixOS configuration with Hyprland, built with Nix Flakes.
 | **Games / Emulation** | SuperTuxKart, RetroArch |
 | **Browser** | Brave (default) |
 | **Desktop** | Hyprland (Wayland compositor) |
+
+### Why you might want this (even as a beginner)
+
+- **Production-friendly**: common creative apps plus the glue tools that make pipelines work (rendering, conversion, capture, asset transfer).
+- **Reproducible**: your setup is described in code; re-installing on a new machine is much easier.
+- **Upgradeable**: update apps by updating the flake inputs and rebuilding.
 
 ## 📁 Project Structure
 
