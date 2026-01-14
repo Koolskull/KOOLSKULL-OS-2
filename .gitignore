@@ -1,0 +1,19 @@
+# Nix build results
+result
+result-*
+
+# Secrets (if you add any)
+secrets/
+*.age
+*.gpg
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
