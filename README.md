@@ -18,7 +18,7 @@ Built with **Hyprland** + **Nix Flakes** + **Home Manager**.
 | **Development** | Cursor IDE, VS Code, Zed, Kate, Redot Engine, Node.js, npm, Bun |
 | **Games / Emulation** | SuperTuxKart, RetroArch |
 | **Workflow / Utilities** | FileZilla (FTP/SFTP), Ark (archive manager), p7zip/unzip/zip/xz/zstd/tar |
-| **Crypto / Web3** | Frame Wallet (open-source Ethereum wallet; not MetaMask), Monero GUI Wallet |
+| **Crypto / Web3** | Frame Wallet (open-source Ethereum wallet; not MetaMask), Monero GUI Wallet, Wownero (CLI), mining tools: XMRig + P2Pool |
 | **Browser** | Brave (default) |
 | **Desktop** | Hyprland (Wayland compositor) |
 
@@ -239,6 +239,18 @@ Edit `home/kool.nix` for:
 - Terminal config
 - Git settings
 - Hyprland keybinds
+
+## ⛏️ Mining (Optional)
+
+This repo includes mining tools so you can experiment on **your own hardware** (be mindful of heat, power usage, and local laws).
+
+- **Monero (XMR)**:
+  - `monerod` (daemon) and `p2pool` are included
+  - `xmrig` is included (you must configure it yourself)
+- **Wownero (WOW)**:
+  - `wownero` (daemon + wallet-cli) is included; it also supports built-in mining flags
+
+Nothing is enabled as a background service by default — you run these manually when you want them.
 
 ## 🎹 OpenMPT Setup (Windows Tracker via Wine)
 

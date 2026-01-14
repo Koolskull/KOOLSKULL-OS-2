@@ -74,6 +74,10 @@ in
 
     frameWallet              # Frame Wallet (open-source Ethereum wallet)
     monero-gui               # Monero GUI Wallet (XMR)
+    monero                   # Monero daemon + CLI tools (monerod, monero-wallet-cli)
+    p2pool                   # Decentralized Monero mining pool (optional)
+    xmrig                    # CPU miner (commonly used for Monero; configure manually)
+    wownero                  # Wownero daemon + wallet-cli (WOW)
     
     # ═══════════════════════════════════════════════════════════
     # 🖥️ TERMINAL & SHELL
