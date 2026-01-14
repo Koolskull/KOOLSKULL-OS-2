@@ -10,6 +10,9 @@ let
 
   # Import Frame Wallet (open-source Ethereum wallet)
   frameWallet = import ../packages/frame.nix { inherit pkgs; };
+
+  # Import Sparrow Wallet (open-source Bitcoin wallet)
+  sparrowWallet = import ../packages/sparrow.nix { inherit pkgs; };
 in
 {
   home.username = "kool";
@@ -78,6 +81,7 @@ in
     p2pool                   # Decentralized Monero mining pool (optional)
     xmrig                    # CPU miner (commonly used for Monero; configure manually)
     wownero                  # Wownero daemon + wallet-cli (WOW)
+    sparrowWallet            # Sparrow Wallet (open-source Bitcoin wallet)
     
     # ═══════════════════════════════════════════════════════════
     # 🖥️ TERMINAL & SHELL

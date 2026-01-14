@@ -18,7 +18,7 @@ Built with **Hyprland** + **Nix Flakes** + **Home Manager**.
 | **Development** | Cursor IDE, VS Code, Zed, Kate, Redot Engine, Node.js, npm, Bun |
 | **Games / Emulation** | SuperTuxKart, RetroArch |
 | **Workflow / Utilities** | FileZilla (FTP/SFTP), Ark (archive manager), p7zip/unzip/zip/xz/zstd/tar |
-| **Crypto / Web3** | Frame Wallet (open-source Ethereum wallet; not MetaMask), Monero GUI Wallet, Wownero (CLI), mining tools: XMRig + P2Pool |
+| **Crypto / Web3** | Frame Wallet (open-source Ethereum wallet; not MetaMask), Monero GUI Wallet, Wownero (CLI), Sparrow Wallet (Bitcoin), mining tools: XMRig + P2Pool |
 | **Browser** | Brave (default) |
 | **Desktop** | Hyprland (Wayland compositor) |
 
@@ -293,6 +293,15 @@ Frame Wallet is packaged from an AppImage release and also needs its SHA256 hash
 1. Try to build: `sudo nixos-rebuild switch --flake .#koolskull-vm`
 2. Nix will fail and show the correct hash
 3. Update `packages/frame.nix` with the correct hash
+4. Rebuild
+
+### Sparrow Wallet Hash
+
+Sparrow Wallet is packaged from the official Linux tarball and needs its SHA256 hash updated on the first build:
+
+1. Try to build: `sudo nixos-rebuild switch --flake .#koolskull-vm`
+2. Nix will fail and show the correct hash
+3. Update `packages/sparrow.nix` with the correct hash
 4. Rebuild
 
 ## 📝 TODO
