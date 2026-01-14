@@ -21,6 +21,8 @@ in
     # 3D & Graphics
     pkgs-unstable.blender    # Blender (latest from unstable for newest version)
     krita                    # Digital painting
+    gimp                     # Image editor
+    freecad                  # 3D CAD modeling
     
     # ═══════════════════════════════════════════════════════════
     # 🎵 MUSIC TRACKERS
@@ -33,8 +35,10 @@ in
     wineWowPackages.stable   # Wine for running OpenMPT
     winetricks               # Helper for Wine
     
-    # Other audio tools
-    audacity
+    # DAWs & Audio Production
+    lmms                     # Music production (FL Studio-like)
+    ardour                   # Professional DAW
+    audacity                 # Audio editor
     
     # ═══════════════════════════════════════════════════════════
     # 💻 DEVELOPMENT
@@ -43,6 +47,7 @@ in
     # IDEs & Editors
     cursor                   # Cursor IDE (AI code editor)
     vscode                   # Visual Studio Code
+    zed-editor               # Zed (fast modern editor)
     kate                     # KDE Advanced Text Editor
     
     # Game Development
@@ -100,10 +105,11 @@ in
     obs-studio   # Screen recording
     
     # ═══════════════════════════════════════════════════════════
-    # 🎮 GAMES
+    # 🎮 GAMES & EMULATION
     # ═══════════════════════════════════════════════════════════
     
     superTuxKart             # Racing game
+    retroarch                # Retro gaming emulator frontend
   ];
 
   # ═══════════════════════════════════════════════════════════
